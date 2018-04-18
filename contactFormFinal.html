@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name ="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="contactForm.css">
+		<title>Contact Form</title>
+	</head>
+	<body>
+
+	<!--bootstrap container widths for different screen sizes-->
+	<div class="container col-lg-offset-4 col-lg-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+	  <h1 class="text-center">Contact us</h1>
+
+	  <form method="post" action='contactFormWgetAddress.html' id="contactForm">
+
+	    <!--name row-->
+	    <div class="form-row">
+	      <div class="col-md-6 col-sm-6">
+	        <label for="firstName">First Name</label>
+	        <input type="text" class="form-control" placeholder="John" name="firstName">
+	      </div>
+	      <div class="col-md-6 col-sm-6">
+	        <label for="surname">Surname</label>
+	        <input type="text" class="form-control" placeholder="Smith" name="surname">
+	      </div>
+	    </div>
+
+	    <!--DOB row-->
+	    <div class="form-row">
+	      <div class="col-md-12 col-sm-12">
+	        <label for="dateOfBirth">Date of Birth</label>
+	      </div>
+	      <div class="col-md-6 col-sm-6">
+	        <input type="text" class="form-control" placeholder="DD/MM/YYYY" name="dateOfBirth">
+	      </div>
+	    </div>
+
+	    <!--postcode row-->
+	    <div class="form-row">
+	      <div class="col-md-12 col-sm-12">
+	        <div id="postcode_lookup" style="margin: 35px 0 5px;"></div>
+	      </div>
+	    </div>
+
+	    <div class="form-group">
+	      <label>Address</label>
+	      <input type="text" placeholder="Buckingham Palace" name="line1" id="line1">
+	      <input type="text" placeholder="Westminister" name="town" id="town">
+	      <input type="text" placeholder="London Town" name="county" id="county">
+	      <input type="text" placeholder="W1" name="postcode" id="postcode">
+	    </div>
+
+	    <!--address row-->
+	    <div class="form-group">
+	      <label for="message">Your Message</label>
+	      <textarea type="text" class="form-control" maxLength="500" name="message" id="message"></textarea>
+	    </div>
+
+	    <!--checkbox row-->
+	    <div class="form-check">
+	      <label class="form-check-label">
+	        <input class="form-check-input" type="checkbox" value="" name="checkBox" id="checkBox"><span id="blurb">You must agree with the <a href="deadend.html">T's and C's</a> in order to submit the form.</span>
+	      </label>
+	    </div>
+
+	    <!--submit button-->
+	    <div class="text-center">
+	      <button class="btn btn-outline-primary" type="submit" id="submitButton">Submit</button>
+	    </div>
+
+	  </form>
+
+	</div>
+
+	<!--popup message-->
+	<div class="text-center messageSent">
+	  <h2>Message Sent!</h2>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+	<script src="https://getaddress.io/js/jquery.getAddress-2.0.7.min.js"></script>
+	<!--save contact information into a readable file-->
+	<script src="fileSaver.js"></script>
+	<script type="text/javascript" src="contactForm.js"></script>
+
+	</body>
+</html>

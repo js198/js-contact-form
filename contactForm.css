@@ -1,0 +1,111 @@
+
+* {
+  	font-family: 'Montserrat', sans-serif, monospace;
+}
+			
+.container {
+	border: 2px solid rgba(81, 203, 238, 1);
+  	margin: 10px auto;
+  	padding: 20px;
+  	border-radius: 20px;
+}
+			
+h1 {
+	margin: 30px 0;
+	border-bottom: 2px solid black;
+	padding-bottom: 5px;
+}
+			
+label {
+    margin: 25px 0 5px;
+}
+			
+#postcodeLookup {
+    margin: 2px;
+}
+			
+select {
+    max-width: 400px;
+}
+			
+#blurb {
+    font-size: 0.8em;
+    position: absolute;
+}
+			
+button {
+    border: 1px solid rgba(81, 203, 238, 1);
+    border-radius: 5px;
+    background-color: white;
+    color: rgba(81, 203, 238, 1);
+    min-height: 40px;
+    max-height: 80px;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+			
+button:hover {
+    color: white;
+    background: rgba(81, 203, 238, 1);
+}
+			
+#submitButton {
+    margin: 60px 0 20px;
+}
+			
+input[type=text], textarea {
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    border-bottom: rgba(81, 203, 238, 1) solid 1px;
+    width: 90%;
+    margin-top: 10px;
+}
+			
+input[type=text]:focus, textarea:focus {
+	transition: all 1s;
+}
+			
+.error {
+    color: red;
+    font-size: 0.8em;
+}
+			
+.valid {
+    transition: all 1s;
+}
+			
+.messageSent {
+    position: fixed;
+    background: green;
+    opacity: 0;
+    width: 300px;
+    height: 110px;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    transition: all 1s;
+    border-radius: 5%;
+    margin: 20px;
+}
+			
+h2 {
+    position: fixed;
+    padding: 35px;
+}
+			
+.activate {
+    opacity: 1;
+    z-index: 5;
+    transition: all 1s;
+}
+
+@media screen and (max-width: 600px){
+	.container {
+		border: none;
+	}
+}
